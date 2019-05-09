@@ -1,0 +1,61 @@
+
+@media screen and (max-width:1024px){/*ipad pro 和 ipad 横*/
+}
+
+@media screen and (max-width: 800px){/*安卓平板*/
+	.mk-blog {
+		padding-left: 40px;
+		box-sizing: border-box;
+	}
+}
+
+@media screen and (max-width: 768px){/*ipad*/
+	.mk-blog {
+		padding-left: 50px;
+	}
+}
+
+@media screen and (max-width: 736px){/*iphone 6/7/8 p 横*/
+	.mk-blog {
+		padding-left: 50px;
+		padding-right: 10px;
+	}
+}
+
+@media screen and (max-width: 667px){/*iphone 6/7/8 横*/
+	.mk-blog {
+		padding-right: 15px;
+		padding-left: 65px;
+	}
+}
+
+@media screen and (max-width: 568px){/*iphone 5 横*/
+}
+
+@media screen and (max-width: 414px){/*iphone 6/7/8 p*/
+	.sidebar-menu-btn{
+		position:fixed;
+		top:0;
+		right:5px;
+	}
+	.top {
+		display: block;
+		border-bottom:none;
+	}
+	.mk-search-form #s {
+		width: 80%;
+	}
+	.mk-blog {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.go-to-top {
+		bottom: 102px;
+	}
+}
+
+@media screen and (max-width: 375px){/*iphone 6/7/8/X*/
+}
+
+@media screen and (max-width: 320px){/*iphone 5*/
+}

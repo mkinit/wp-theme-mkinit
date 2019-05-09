@@ -1,0 +1,55 @@
+body{
+	font-family:"Microsoft Yahei";
+}
+
+/*登录样式*/
+#login::after{
+	content:"";
+	background-image:url(../images/login_wechat_QRcode.jpg);
+	display:block;
+	width:130px;
+	height:130px;
+	background-size:contain;
+	text-align:center;
+	margin:0 auto;
+	line-height:13px;
+}
+.submit{
+	overflow:hidden;
+}
+#loginform::after{
+	content:"邮件联系：im@mkinit.com，或扫微信二维码";
+	display:block;
+	text-align:center;
+	padding:10px 0;
+}
+#login h1{
+	margin-top:30px;
+}
+#login h1 a{
+	background-image: url("../images/avatar.jpg");
+	border-radius: 50%;
+	background-size:contain;
+	width:130px;
+	height:130px;
+}
+#login{
+	width:100%;
+	max-width: 480px;
+	background: #000;
+	opacity: 0.7;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.login form{
+	background:#000;
+	margin-top:0;
+	padding:0 26px;
+}
+.login #nav{
+	margin-top:12px;
+}
