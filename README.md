@@ -25,9 +25,3 @@
 * 文章内页默认为图片添加放大功能
 * 添加文章内页图片的懒加载
 * 禁止任何缩略图生成
-
-## 需要安装的插件(内置推荐)
-
-* Classic Editor：经典编辑器样式
-* wp clean up：数据库清理优化
-	* https://wordpress.org/plugins/wp-clean-up/
