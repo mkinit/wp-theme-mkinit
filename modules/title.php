@@ -9,4 +9,3 @@
 <?php if ( is_404() ) { ?><title>亲，你迷路了！ - <?php bloginfo('name'); ?></title><?php } ?>
 <?php if (function_exists('is_tag')) { if ( is_tag() ) { ?><title><?php  single_tag_title("", true); echo " - "; bloginfo('name'); ?></title><?php } ?><?php } ?>
 <?php if ( is_tax('notice') ) { ?><title><?php setTitle(); echo " - "; bloginfo('name'); ?></title><?php } ?>
-<?php echo "\n"; ?>

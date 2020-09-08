@@ -1,0 +1,486 @@
+@bg:#fefefe;//背景
+@line:#CCC;//分割线
+@hover:#e73a74;//hover
+@font:#333;//正文
+@second:#666;//图标、分类、标签
+@link:#4183c4;//链接
+
+* {
+    cursor: url("../images/icon/cursor.png"), auto;
+}
+
+html,
+body {
+    font            : 16px/1.5 "Microsoft Yahei";
+    margin          : 0;
+    color           : @font;
+    background-color: @bg;
+    letter-spacing  : 1px;
+}
+
+a {
+    color          : @link;
+    text-decoration: none;
+
+    &:hover {
+        color: @hover;
+    }
+}
+
+img {
+    vertical-align: middle;
+    height        : auto;
+}
+
+.dashicons {
+    color: @second;
+}
+
+pre {
+    font-size  : 14px;
+    white-space: pre-wrap !important;
+    word-wrap  : break-word !important;
+}
+
+code {
+    font-size  : 1em !important;
+    line-height: 1em;
+    padding    : 0 0 3px 3px !important;
+    margin     : 0 3px !important;
+}
+
+/*公共样式*/
+.mk-overflow {
+    overflow: hidden;
+}
+
+.mk-center {
+    max-width: 828px;
+    margin   : 0 auto;
+}
+
+.mk-flex-between {
+    display        : flex;
+    justify-content: space-between;
+}
+
+/*面包屑导航*/
+.location-navigation {
+    margin-top: 10px;
+    font-size : 0.9em;
+}
+
+/*翻页导航*/
+.navigation {
+    text-align   : center;
+    font-size    : 20px;
+    line-height  : 20px;
+    margin-bottom: 60px;
+    color        : @link;
+
+    .dashicons {
+        color: @link;
+    }
+}
+
+.screen-reader-text {
+    display: none;
+}
+
+.page-numbers {
+    margin: 0 5px;
+}
+
+.nav-links .current,
+.page-numbers:hover,
+.navigation .dashicons:hover {
+    color: @hover;
+}
+
+/*边栏主菜单样式*/
+.sidebar-menu {
+    position    : fixed;
+    top         : 0;
+    left        : -100%;
+    border-right: 1px solid @line;
+    height      : 100%;
+    min-width   : 220px;
+    max-width   : 100%;
+    z-index     : 10;
+    transition  : all .3s linear;
+}
+
+.main-menu-container {
+    width: 100%;
+}
+
+.sidebar-menu-btn {
+    position: absolute;
+    top     : 0;
+    right   : 0;
+    display : block;
+
+    .dashicons {
+        width    : 40px;
+        height   : 40px;
+        font-size: 40px;
+
+        &:hover {
+            color: @hover;
+        }
+    }
+}
+
+.main-menu-list {
+    padding-left   : 50px;
+    padding-top    : 35px;
+    list-style-type: circle;
+
+    &>li:hover {
+        list-style-type: disc;
+    }
+
+    &>li {
+        position    : relative;
+        padding-left: 16px;
+        margin      : 8px 0;
+    }
+
+    a {
+        display    : inline-block;
+        min-width  : 100px;
+        font-size  : 1.1em;
+        line-height: 2;
+        transition : all linear .6s;
+
+        &:hover {
+            text-shadow: 0 -20px 0 @line;
+            color      : @hover;
+        }
+    }
+}
+
+.current-menu-item,
+.current-menu-parent {
+    list-style-type: disc;
+}
+
+/*二级菜单*/
+.main-menu-list>li:hover .sub-menu {
+    animation: duang linear 1s;
+    transform: scaleY(1)
+}
+
+.sub-menu {
+    padding         : 10px 0 10px 50px;
+    font-size       : .9em;
+    position        : absolute;
+    left            : -28px;
+    top             : 100%;
+    background-color: @bg;
+    border          : 1px solid @line;
+    border-radius   : 5px;
+    transform       : scaleY(0);
+    transform-origin: center top;
+    z-index         : 1;
+
+    &::after {
+        content      : "";
+        display      : block;
+        position     : absolute;
+        left         : 42%;
+        top          : -9px;
+        width        : 1px;
+        border-bottom: 8px solid @line;
+        border-left  : 5px solid transparent;
+        border-right : 5px solid transparent;
+    }
+
+    li {
+        a {
+            padding    : 0 10px;
+            line-height: 2.5em;
+
+            &:hover {
+                text-shadow: 0 18px 0 @line;
+            }
+        }
+    }
+}
+
+@keyframes duang {
+    25% {
+        transform: scaleY(.9);
+    }
+
+    45% {
+        transform: scaleY(1);
+    }
+
+    60% {
+        transform: scaleY(.95);
+    }
+
+    75% {
+        transform: scaleY(1);
+    }
+
+    85% {
+        transform: scaleY(.98);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/*页面容器*/
+.mk-blog {
+    min-width: 320px;
+}
+
+.page-container {
+    background-image: url("../images/background-image.png");
+}
+
+.page-content {
+    margin-top: 30px;
+    padding   : 0 5px;
+}
+
+/*头部*/
+.top {
+    padding      : 10px 0 20px;
+    border-bottom: 1px solid @line;
+
+    .top-info {
+        display    : flex;
+        align-items: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.blog-name {
+    a {
+        color: @second;
+
+        &:hover {
+            color: @hover;
+        }
+    }
+}
+
+.avatar {
+    margin-right: 10px;
+
+    img {
+        width        : 100%;
+        max-width    : 80px;
+        height       : auto;
+        border-radius: 50%;
+        transition   : transform linear .5s;
+        box-shadow   : 2px 2px 5px 0 #000;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.avatar,
+.blog-name {
+    display: inline-block;
+}
+
+//搜索
+.mk-search-form {
+    margin-top   : 50px;
+    border-bottom: 1px solid @line;
+
+    input,
+    button {
+        border          : none;
+        outline-style   : none;
+        background-color: transparent;
+    }
+
+    #s {
+        padding    : 0 5px;
+        line-height: 35px;
+    }
+
+    #search-submit {
+        vertical-align: bottom;
+
+        .dashicons {
+            width    : 35px;
+            height   : 35px;
+            font-size: 35px;
+
+            &:hover {
+                color: @hover;
+            }
+        }
+    }
+}
+
+/*文章列表*/
+article {
+    position      : relative;
+    overflow      : hidden;
+    margin-bottom : 20px;
+    border-bottom : 1px solid @line;
+    padding-bottom: 20px;
+
+    h2 {
+        margin-bottom: 5px;
+    }
+}
+
+.article-content {
+    overflow: hidden;
+
+    video {
+        margin : 0 auto;
+        display: block;
+    }
+
+    a {
+        img {
+            display: block;
+            margin : 0 auto;
+        }
+    }
+
+    img {
+        max-width: 100%;
+
+        &.alignleft {
+            float: left;
+        }
+
+        &.alignright {
+            float: right;
+        }
+    }
+}
+
+/*文章导航*/
+.post-nav {
+    width        : 160px;
+    float        : right;
+    border       : 1px solid @hover;
+    margin-left  : 10px;
+    margin-bottom: 10px;
+    padding      : 0 20px;
+
+    h4 {
+        text-align   : center;
+        margin-top   : 10px;
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin-top  : 5px;
+        list-style  : none;
+        padding-left: 0;
+
+        li {
+            margin: 8px 0;
+
+            a {
+                font-size  : 13px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+.article-footer {
+    color     : @second;
+    margin-top: 30px;
+    font-size : 14px;
+
+    .dashicons {
+        margin-right: 5px;
+    }
+}
+
+.article-footer-date {
+    color: @link;
+}
+
+.article-footer-tag {
+    margin-left: 10px;
+}
+
+/*分类页上方的子分类*/
+.cat-item-none {
+    display: none;
+}
+
+.child-categories {
+    margin-top: 30px;
+
+    ul {
+        list-style: none;
+        padding   : 0;
+
+        li {
+            display     : inline-block;
+            margin-right: 10px;
+
+            a {
+                padding: 5px 10px;
+                border : 1px solid @hover;
+            }
+        }
+    }
+}
+
+/*底部*/
+footer {
+    padding   : 30px 0;
+    font-size : 15px;
+    text-align: center;
+}
+
+/*返回顶部*/
+.go-to-top {
+    position : fixed;
+    display  : none;
+    bottom   : 25px;
+    right    : 25px;
+    .dashicons{
+        font-size: 2em;
+    }
+
+    &:hover {
+        .dashicons {
+            color: @hover;
+        }
+    }
+}
+
+/*自定义的图标*/
+.mk-icon {
+    position        : relative;
+    display         : inline-block;
+    width           : 40px;
+    height          : 40px;
+    background-color: #EEE;
+    border-radius   : 50%;
+    transition      : background-color linear .3s;
+    text-align      : center;
+}
+
+.mk-icon:hover {
+    background-color: #DDD;
+}

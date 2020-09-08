@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="zh-cmn-Hans-CN">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<?php get_template_part('/modules/title'); ?>
 	<meta name="author" content="水秋玄" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
-	<link rel="stylesheet" type="text/css" media="screen and (max-width:800px)" href="<?php bloginfo('template_url'); ?>/css/media.css"/>
-	<link rel="shortcut icon" href="#" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/media.css"/>
+	<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/css/main.less" />
+	<script src="<?php bloginfo('template_url'); ?>/js/less.min.js" type="text/javascript"></script>
+	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.png" />
 	<?php wp_head(); ?>
 </head>
 <body>
 	<div class="sidebar-menu">
 		<div class="sidebar-menu-btn">
 			<span class="dashicons dashicons-menu"></span>
-			<span class="dashicons dashicons-no-alt" style="display:none;"></span>
 		</div>
 		<?php wp_nav_menu(array(
 			'theme_location' => 'mk-main-menu',
@@ -33,7 +34,7 @@
 				<div class="top mk-flex-between">
 					<div class="top-info">
 						<div class="avatar">
-							<img src="<?php bloginfo('template_url'); ?>/images/avatar.jpg" alt="万年不变的头像图片">
+							<img src="<?php bloginfo('template_url'); ?>/images/avatar.jpg" alt="万年不变的头像">
 						</div>
 						<div class="blog-name">
 							<h1><a href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a></h1>
